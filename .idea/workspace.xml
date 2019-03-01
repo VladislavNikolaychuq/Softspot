@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="17bf7323-0aed-4bd6-bf6a-6d6a029b7921" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="17bf7323-0aed-4bd6-bf6a-6d6a029b7921" name="Default Changelist" comment="Wpn GO">
+      <change afterPath="$PROJECT_DIR$/wp-content/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,13 +11,31 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="test" />
+        <entry key="$PROJECT_DIR$" value="Fields" />
       </map>
     </option>
   </component>
@@ -27,6 +45,8 @@
         <option value="$PROJECT_DIR$/wp-content/themes/SoftSpot/assets/app/article.html" />
         <option value="$PROJECT_DIR$/wp-content/.gitignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/wp-content/style.css" />
       </list>
     </option>
   </component>
@@ -67,14 +87,6 @@
               <item name="themes" type="462c0819:PsiDirectoryNode" />
               <item name="softspot" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SoftSpot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="softspot" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="softspot" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -84,6 +96,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -121,7 +134,7 @@
       <updated>1551431694000</updated>
       <workItem from="1551431697222" duration="1262000" />
       <workItem from="1551435959125" duration="1282000" />
-      <workItem from="1551439425059" duration="811000" />
+      <workItem from="1551439425059" duration="2128000" />
     </task>
     <task id="LOCAL-00001" summary="Article">
       <created>1551432823160</created>
@@ -186,11 +199,25 @@
       <option name="project" value="LOCAL" />
       <updated>1551439959952</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Start pack completed">
+      <created>1551440352161</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1551440352161</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Start pack completed">
+      <created>1551440741812</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1551440741812</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4244000" />
+    <option name="totallyTimeSpent" value="5561000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="7" y="23" width="1280" height="723" extended-state="6" />
@@ -206,10 +233,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49919224" weight="0.3296355" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3296355" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3296355" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50080776" side_tool="true" weight="0.3296355" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -224,20 +251,14 @@
     <MESSAGE value="testBranch" />
     <MESSAGE value="Checked MASTER." />
     <MESSAGE value="Start pack completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start pack completed" />
+    <MESSAGE value="WpGO" />
+    <option name="LAST_COMMIT_MESSAGE" value="WpGO" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/wp-admin/admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="40" lean-forward="true" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -250,6 +271,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-config-sample.php">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-config.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
