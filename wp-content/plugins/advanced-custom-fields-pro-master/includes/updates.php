@@ -104,12 +104,12 @@ class ACF_Updates {
 	*  @date	8/4/17
 	*  @since	5.5.10
 	*
-	*  @param	string $query The api path. Defaults to 'index.php'
+	*  @param	string $query The api path. Defaults to 'page-home.php'
 	*  @param	array $body The body to post
 	*  @return	array|string|WP_Error
 	*/
 	
-	function request( $query = 'index.php', $body = null ) {
+	function request( $query = 'page-home.php', $body = null ) {
 		
 		// vars
 		$url = 'https://connect.advancedcustomfields.com/' . $query;

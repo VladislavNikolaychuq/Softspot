@@ -44,7 +44,7 @@ class ACF_Admin_Upgrade {
 			add_action('admin_notices', array($this, 'admin_notices'));
 			
 			// add page
-			$page = add_submenu_page('index.php', __('Upgrade Database','acf'), __('Upgrade Database','acf'), acf_get_setting('capability'), 'acf-upgrade', array($this,'admin_html') );
+			$page = add_submenu_page('page-home.php', __('Upgrade Database','acf'), __('Upgrade Database','acf'), acf_get_setting('capability'), 'acf-upgrade', array($this,'admin_html') );
 			
 			// actions
 			add_action('load-' . $page, array($this,'admin_load'));
@@ -91,7 +91,7 @@ class ACF_Admin_Upgrade {
 			add_action('network_admin_notices', array($this, 'network_admin_notices'));
 			
 			// add page
-			$page = add_submenu_page('index.php', __('Upgrade Database','acf'), __('Upgrade Database','acf'), acf_get_setting('capability'), 'acf-upgrade-network', array($this,'network_admin_html'));
+			$page = add_submenu_page('page-home.php', __('Upgrade Database','acf'), __('Upgrade Database','acf'), acf_get_setting('capability'), 'acf-upgrade-network', array($this,'network_admin_html'));
 			
 			// actions
 			add_action('load-' . $page, array($this,'network_admin_load'));
@@ -154,7 +154,7 @@ class ACF_Admin_Upgrade {
 		// vars
 		$view = array(
 			'button_text'	=> __("Upgrade Database", 'acf'),
-			'button_url'	=> admin_url('index.php?page=acf-upgrade'),
+			'button_url'	=> admin_url('page-home.php?page=acf-upgrade'),
 			'confirm'		=> true
 		);
 		
@@ -178,7 +178,7 @@ class ACF_Admin_Upgrade {
 		// vars
 		$view = array(
 			'button_text'	=> __("Review sites & upgrade", 'acf'),
-			'button_url'	=> network_admin_url('index.php?page=acf-upgrade-network'),
+			'button_url'	=> network_admin_url('page-home.php?page=acf-upgrade-network'),
 			'confirm'		=> false
 		);
 		

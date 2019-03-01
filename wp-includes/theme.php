@@ -753,7 +753,7 @@ function switch_theme( $stylesheet ) {
 }
 
 /**
- * Checks that current theme files 'index.php' and 'style.css' exists.
+ * Checks that current theme files 'page-home.php' and 'style.css' exists.
  *
  * Does not initially check the default theme, which is the fallback and should always exist.
  * But if it doesn't exist, it'll fall back to the latest core default theme that does exist.
@@ -778,7 +778,7 @@ function validate_current_theme() {
 	if ( wp_installing() || ! apply_filters( 'validate_current_theme', true ) )
 		return true;
 
-	if ( ! file_exists( get_template_directory() . '/index.php' ) ) {
+	if ( ! file_exists( get_template_directory() . '/page-home.php' ) ) {
 		// Invalid.
 	} elseif ( ! file_exists( get_template_directory() . '/style.css' ) ) {
 		// Invalid.

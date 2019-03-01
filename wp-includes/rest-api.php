@@ -141,10 +141,10 @@ function rest_api_init() {
 function rest_api_register_rewrites() {
 	global $wp_rewrite;
 
-	add_rewrite_rule( '^' . rest_get_url_prefix() . '/?$','index.php?rest_route=/','top' );
-	add_rewrite_rule( '^' . rest_get_url_prefix() . '/(.*)?','index.php?rest_route=/$matches[1]','top' );
-	add_rewrite_rule( '^' . $wp_rewrite->index . '/' . rest_get_url_prefix() . '/?$','index.php?rest_route=/','top' );
-	add_rewrite_rule( '^' . $wp_rewrite->index . '/' . rest_get_url_prefix() . '/(.*)?','index.php?rest_route=/$matches[1]','top' );
+	add_rewrite_rule( '^' . rest_get_url_prefix() . '/?$','page-home.php?rest_route=/','top' );
+	add_rewrite_rule( '^' . rest_get_url_prefix() . '/(.*)?','page-home.php?rest_route=/$matches[1]','top' );
+	add_rewrite_rule( '^' . $wp_rewrite->index . '/' . rest_get_url_prefix() . '/?$','page-home.php?rest_route=/','top' );
+	add_rewrite_rule( '^' . $wp_rewrite->index . '/' . rest_get_url_prefix() . '/(.*)?','page-home.php?rest_route=/$matches[1]','top' );
 }
 
 /**
@@ -319,10 +319,10 @@ function get_rest_url( $blog_id = null, $path = '/', $scheme = 'rest' ) {
 		$url .= '/' . ltrim( $path, '/' );
 	} else {
 		$url = trailingslashit( get_home_url( $blog_id, '', $scheme ) );
-		// nginx only allows HTTP/1.0 methods when redirecting from / to /index.php
-		// To work around this, we manually add index.php to the URL, avoiding the redirect.
-		if ( 'index.php' !== substr( $url, 9 ) ) {
-			$url .= 'index.php';
+		// nginx only allows HTTP/1.0 methods when redirecting from / to /page-home.php
+		// To work around this, we manually add page-home.php to the URL, avoiding the redirect.
+		if ( 'page-home.php' !== substr( $url, 9 ) ) {
+			$url .= 'page-home.php';
 		}
 
 		$path = '/' . ltrim( $path, '/' );

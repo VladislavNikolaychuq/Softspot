@@ -6,7 +6,7 @@ RewriteBase /softspot/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /softspot/index.php [L]
+RewriteRule . /softspot/page-home.php [L]
 </IfModule>
 
 # END WordPress
