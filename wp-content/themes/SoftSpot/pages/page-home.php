@@ -1,6 +1,5 @@
 <?php //Template Name: Home page
-
-;?>
+// ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
