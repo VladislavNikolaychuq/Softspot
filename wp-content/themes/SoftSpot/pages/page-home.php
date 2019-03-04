@@ -1,6 +1,19 @@
 <?php //Template Name: Home page
 
 get_header();
+
+
+
+
+$pet_care_delivered=get_field('pet_care_delivered');
+$living_room_title=get_field('living_room_title');
+$online=get_field('online');
+$sed_ut_perspiciatis=get_field('sed_ut_perspiciatis');
+$how_it_works=get_field('how_it_works');
+$pick_the_date=get_field('pick_the_date');
+$pick_the_date_description=get_field('pick_the_date_description');
+$image_date_picker=get_field('image_date_picker');
+$vet_consultation=get_field('vet_consultation');
 ?>
 
     <!-- hero -->
@@ -8,9 +21,7 @@ get_header();
 
         <div id="hero__title">
             <h2>
-                <span>pet care</span><br/>
-                <span>delivered</span><br/>
-                <span>Professional help at your fingertips</span>
+                <?= $pet_care_delivered ?>
             </h2>
         </div>
 
@@ -123,52 +134,24 @@ get_header();
 
         <div id="living-room__content">
 
-            <h2>Living room comfort<br/>
-                over waiting room stress</h2>
-
+            <h2><?=$living_room_title?></h2>
+            <?php if( have_rows('facilities') ): ?>
             <ul>
-
+             <?php while ( have_rows('facilities') ) : the_row();
+             $texted_description = get_sub_field('texted_description');
+             $image_for_description = get_sub_field('image_for_description');
+         ?>
                 <li>
                     <div class="living-room__icon">
-                        <img src="<?= DIRECT ?>pic/icon-doctor.svg" alt="img" />
+                        <img src="<?= $image_for_description?>" alt="img" />
                     </div>
                     <div class="living-room__text">
-                        <p>Professional help<br/>
-                            at your fingertips</p>
+                        <p><?= $texted_description?> </p>
                     </div>
                 </li>
-
-                <li>
-                    <div class="living-room__icon">
-                        <img src="<?= DIRECT ?>pic/icon_calendar.svg" alt="img" />
-                    </div>
-                    <div class="living-room__text">
-                        <p>Easy scheduling<br/>
-                            & payments</p>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="living-room__icon">
-                        <img src="<?= DIRECT ?>pic/icon_help.svg" alt="img" />
-                    </div>
-                    <div class="living-room__text">
-                        <p>24/7 support team<br/>
-                            at your service</p>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="living-room__icon">
-                        <img src="<?= DIRECT ?>pic/icon_shield.svg" alt="img" />
-                    </div>
-                    <div class="living-room__text">
-                        <p>Safety and<br/>
-                            reliability</p>
-                    </div>
-                </li>
-
-            </ul>
+                <?php endwhile; ?>
+                </ul>
+             <?php endif; ?>
 
             <div id="living-room__cat" class="is-hide" data-space="0.75">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.76 22.2">
@@ -208,8 +191,7 @@ get_header();
 
             <div id="app-promo__text">
 
-                <h3>Online and <br/> in-house visits <br/> for your pets</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                <?= $online?>
 
                 <div id="app-promo__link">
 
@@ -239,10 +221,7 @@ get_header();
 
                 <div id="how-it-works__text">
 
-                    <h2>How it works</h2>
-
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-
+                  <?= $how_it_works?>
                 </div>
 
                 <div id="toggle">
@@ -264,42 +243,19 @@ get_header();
             </div>
 
         </div>
+                    <?php
 
-        <div id="how-it-works__slider" data-toggle='{
-                                    "pet-parent": [
-                                        {
-                                            "image": "pic/slide-01.png",
-                                            "title": "Sign up in 1 min"
-                                        },{
-                                            "image": "pic/slide-02.png",
-                                            "title": "Add info about <br/> your pet"
-                                        }, {
-                                            "image": "pic/slide-01.png",
-                                            "title": "Choose your <br/> doctor"
-                                        },{
-                                            "image": "pic/slide-02.png",
-                                            "title": "Fourth slide"
-                                        },{
-                                            "image": "pic/slide-02.png",
-                                            "title": "Fifth slide"
-                                        },{
-                                            "image": "pic/slide-02.png",
-                                            "title": "Sixth slide"
-                                        }
-                                    ],
-                                    "vet": [
-                                        {
-                                            "image": "pic/steps_laptop_1.png",
-                                            "title": "Add info about <br/> your pet"
-                                        },{
-                                            "image": "pic/steps_laptop_2.png",
-                                            "title": "Sign up in 1 min"
-                                        },{
-                                            "image": "pic/steps_laptop_3.png",
-                                            "title": "Choose your <br/> doctor"
-                                        }
-                                    ]
-                                }'>
+                    $vet= get_field('for_vet');
+
+                    $petparent=get_field('for_pet_parent');
+
+                        $globalpet=[];
+                        $globalpet['vet']=$vet;
+                        $globalpet['pet-parent']=$petparent;
+                        $result= json_encode($globalpet);
+                    ?>
+
+        <div id="how-it-works__slider" data-toggle='<?php echo $result; ?>'>
 
             <div id="how-it-works__slider-content" class="is-loading">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250.9 250.78">
@@ -344,16 +300,16 @@ get_header();
 
             <div id="schedule-promo__text">
 
-                <h2>Pick the date & time convenient for you</h2>
+                <h2><?=$pick_the_date ?></h2>
 
-                <p>Our hours of operation<br/> 7am-9pm / 7 DAYS A WEEK</p>
+                <p><?=$pick_the_date_description ?></p>
 
             </div>
 
         </div>
 
         <div id="schedule-promo__picture">
-            <img src="<?= DIRECT ?>pic/pickdate.jpg" alt="img" />
+            <img src="<?=$image_date_picker  ?>" alt="img" />
         </div>
 
     </div>
@@ -398,10 +354,7 @@ get_header();
 
         <div id="vet-consultation__content">
 
-            <h2>vet <span>online</span><br/>
-                Consultation</h2>
-
-            <p>Doctors will give medical advice instantly over Video Chat.</p>
+            <?=$vet_consultation ?>
 
             <a href="#" class="btn btn_color-1"><span>book now</span></a>
 
@@ -424,21 +377,22 @@ get_header();
                 </div>
             </div>
 
-            <h2>There’s a lot more we can do from home</h2>
+            <h2><?=$titledpfromhome=get_field('title_do_from_home') ?></h2>
 
         </div>
 
         <div class="tabs">
-
+            <?php if( have_rows('preview') ): ?>
             <div class="tabs__item-wrap">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <span role="tab" class="tabs__item swiper-slide">Examinations</span>
-                        <span role="tab" class="tabs__item swiper-slide">Vaccinations</span>
-                        <span role="tab" class="tabs__item swiper-slide">Diagnostics</span>
-                        <span role="tab" class="tabs__item swiper-slide">Procedures</span>
-                        <span role="tab" class="tabs__item swiper-slide">Pet Travel</span>
-                        <span role="tab" class="tabs__item swiper-slide">End of Life</span>
+                        <?php while ( have_rows('preview') ) : the_row();
+                        $name_preview = get_sub_field('name_preview');
+                        $about_preview = get_sub_field('about_preview');
+                        $price_preview = get_sub_field('price_preview');
+                        $named_description= get_sub_field('named_description');
+                        ?>
+                        <span role="tab" class="tabs__item swiper-slide"><?=$name_preview?></span>
                     </div>
                 </div>
             </div>
@@ -454,34 +408,13 @@ get_header();
 
                             <div class="services__text">
 
-                                <h2>Examinations</h2>
-                                <p>Cats and dogs require a number of vaccinations to protect them against life-threatening and untreatable conditions.</p>
+                                <?=$named_description?>
 
                             </div>
 
                             <div class="services__includes">
 
-                                <dl>
-                                    <dt>Core vaccinations for dogs include:</dt>
-                                    <dd>
-                                        <ul>
-                                            <li>Rabies</li>
-                                            <li>DHPP</li>
-                                            <li>Bordetella</li>
-                                        </ul>
-                                    </dd>
-                                </dl>
-
-                                <dl>
-                                    <dt>Core vaccinations for cats include:</dt>
-                                    <dd>
-                                        <ul>
-                                            <li>Rabies</li>
-                                            <li>FVRCP</li>
-                                            <li>FeLV</li>
-                                        </ul>
-                                    </dd>
-                                </dl>
+                             <?=$about_preview?>
 
                             </div>
 
@@ -489,25 +422,7 @@ get_header();
 
                         <div class="services__aside">
 
-                            <dl>
-                                <dt>Core Vaccines</dt>
-                                <dd>$20</dd>
-                            </dl>
-
-                            <dl>
-                                <dt>Rattlesnake</dt>
-                                <dd>$30</dd>
-                            </dl>
-
-                            <dl>
-                                <dt>Lyme Disease</dt>
-                                <dd>$30</dd>
-                            </dl>
-
-                            <dl>
-                                <dt>Canine Influenza</dt>
-                                <dd>$30</dd>
-                            </dl>
+                          <?=$price_preview ?>
 
                         </div>
 
@@ -515,329 +430,13 @@ get_header();
 
                 </div>
 
-                <div class="tabs__content">
 
-                    <article class="services__item">
-
-                        <div class="services__content">
-
-                            <div class="services__text">
-
-                                <h2>Vaccinations</h2>
-                                <p>Cats and dogs require a number of vaccinations to protect them against life-threatening and untreatable conditions.</p>
-
-                            </div>
-
-                            <div class="services__includes">
-
-                                <dl>
-                                    <dt>Core vaccinations for dogs include:</dt>
-                                    <dd>
-                                        <ul>
-                                            <li>Rabies</li>
-                                            <li>DHPP</li>
-                                            <li>Bordetella</li>
-                                        </ul>
-                                    </dd>
-                                </dl>
-
-                                <dl>
-                                    <dt>Core vaccinations for cats include:</dt>
-                                    <dd>
-                                        <ul>
-                                            <li>Rabies</li>
-                                            <li>FVRCP</li>
-                                            <li>FeLV</li>
-                                        </ul>
-                                    </dd>
-                                </dl>
-
-                            </div>
-
-                        </div>
-
-                        <div class="services__aside">
-
-                            <dl>
-                                <dt>Core Vaccines</dt>
-                                <dd>$20</dd>
-                            </dl>
-
-                            <dl>
-                                <dt>Rattlesnake</dt>
-                                <dd>$30</dd>
-                            </dl>
-
-                            <dl>
-                                <dt>Lyme Disease</dt>
-                                <dd>$30</dd>
-                            </dl>
-
-                            <dl>
-                                <dt>Canine Influenza</dt>
-                                <dd>$30</dd>
-                            </dl>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-                <div class="tabs__content">
-
-                    <article class="services__item">
-
-                        <div class="services__content">
-
-                            <div class="services__text">
-
-                                <h2>Diagnostics</h2>
-                                <p>Cats and dogs require a number of vaccinations to protect them against life-threatening and untreatable conditions.</p>
-
-                            </div>
-
-                            <div class="services__includes">
-
-                                <dl>
-                                    <dt>Core vaccinations for dogs include:</dt>
-                                    <dd>
-                                        <ul>
-                                            <li>Rabies</li>
-                                            <li>DHPP</li>
-                                            <li>Bordetella</li>
-                                        </ul>
-                                    </dd>
-                                </dl>
-
-                                <dl>
-                                    <dt>Core vaccinations for cats include:</dt>
-                                    <dd>
-                                        <ul>
-                                            <li>Rabies</li>
-                                            <li>FVRCP</li>
-                                            <li>FeLV</li>
-                                        </ul>
-                                    </dd>
-                                </dl>
-
-                            </div>
-
-                        </div>
-
-                        <div class="services__aside">
-
-                            <dl>
-                                <dt>Core Vaccines</dt>
-                                <dd>$20</dd>
-                            </dl>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-                <div class="tabs__content">
-
-                    <article class="services__item">
-
-                        <div class="services__content">
-
-                            <div class="services__text">
-
-                                <h2>Procedures</h2>
-                                <p>Cats and dogs require a number of vaccinations to protect them against life-threatening and untreatable conditions.</p>
-
-                            </div>
-
-                            <div class="services__includes">
-
-                                <dl>
-                                    <dt>Core vaccinations for dogs include:</dt>
-                                    <dd>
-                                        <ul>
-                                            <li>Rabies</li>
-                                            <li>DHPP</li>
-                                            <li>Bordetella</li>
-                                        </ul>
-                                    </dd>
-                                </dl>
-
-                            </div>
-
-                        </div>
-
-                        <div class="services__aside">
-
-                            <dl>
-                                <dt>Core Vaccines</dt>
-                                <dd>$20</dd>
-                            </dl>
-
-                            <dl>
-                                <dt>Rattlesnake</dt>
-                                <dd>$30</dd>
-                            </dl>
-
-                            <dl>
-                                <dt>Lyme Disease</dt>
-                                <dd>$30</dd>
-                            </dl>
-
-                            <dl>
-                                <dt>Canine Influenza</dt>
-                                <dd>$30</dd>
-                            </dl>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-                <div class="tabs__content">
-
-                    <article class="services__item">
-
-                        <div class="services__content">
-
-                            <div class="services__text">
-
-                                <h2>Pet travel</h2>
-                                <p>Cats and dogs require a number of vaccinations to protect them against life-threatening and untreatable conditions.</p>
-
-                            </div>
-
-                            <div class="services__includes">
-
-                                <dl>
-                                    <dt>Core vaccinations for dogs include:</dt>
-                                    <dd>
-                                        <ul>
-                                            <li>Rabies</li>
-                                            <li>DHPP</li>
-                                            <li>Bordetella</li>
-                                        </ul>
-                                    </dd>
-                                </dl>
-
-                                <dl>
-                                    <dt>Core vaccinations for cats include:</dt>
-                                    <dd>
-                                        <ul>
-                                            <li>Rabies</li>
-                                            <li>FVRCP</li>
-                                            <li>FeLV</li>
-                                        </ul>
-                                    </dd>
-                                </dl>
-
-                            </div>
-
-                        </div>
-
-                        <div class="services__aside">
-
-                            <dl>
-                                <dt>Core Vaccines</dt>
-                                <dd>$20</dd>
-                            </dl>
-
-                            <dl>
-                                <dt>Rattlesnake</dt>
-                                <dd>$30</dd>
-                            </dl>
-
-                            <dl>
-                                <dt>Lyme Disease</dt>
-                                <dd>$30</dd>
-                            </dl>
-
-                            <dl>
-                                <dt>Canine Influenza</dt>
-                                <dd>$30</dd>
-                            </dl>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-                <div class="tabs__content">
-
-                    <article class="services__item">
-
-                        <div class="services__content">
-
-                            <div class="services__text">
-
-                                <h2>End of life</h2>
-                                <p>Cats and dogs require a number of vaccinations to protect them against life-threatening and untreatable conditions.</p>
-
-                            </div>
-
-                            <div class="services__includes">
-
-                                <dl>
-                                    <dt>Core vaccinations for dogs include:</dt>
-                                    <dd>
-                                        <ul>
-                                            <li>Rabies</li>
-                                            <li>DHPP</li>
-                                            <li>Bordetella</li>
-                                        </ul>
-                                    </dd>
-                                </dl>
-
-                                <dl>
-                                    <dt>Core vaccinations for cats include:</dt>
-                                    <dd>
-                                        <ul>
-                                            <li>Rabies</li>
-                                            <li>FVRCP</li>
-                                            <li>FeLV</li>
-                                        </ul>
-                                    </dd>
-                                </dl>
-
-                            </div>
-
-                        </div>
-
-                        <div class="services__aside">
-
-                            <dl>
-                                <dt>Core Vaccines</dt>
-                                <dd>$20</dd>
-                            </dl>
-
-                            <dl>
-                                <dt>Rattlesnake</dt>
-                                <dd>$30</dd>
-                            </dl>
-
-                            <dl>
-                                <dt>Lyme Disease</dt>
-                                <dd>$30</dd>
-                            </dl>
-
-                            <dl>
-                                <dt>Canine Influenza</dt>
-                                <dd>$30</dd>
-                            </dl>
-
-                        </div>
-
-                    </article>
-
-                </div>
 
             </div>
             <!-- /tabs__wrap -->
-
+        <?php endwhile; ?>
         </div>
+        <?php endif; ?>
 
         <div id="services__back">
             <div>
@@ -939,4 +538,41 @@ get_header();
         <a href="#" class="btn btn_color-1"><span>sign up as pet parent</span></a>
         <a href="#" class="btn btn_color-2"><span>sign up as vet</span></a>
 
-   <?php get_footer()?>
+<!--   --><?php //get_footer()?>
+<!--        --><?php
+//        $vet=[];
+//        $vetparent= get_field('for_vet');
+//
+//        foreach($vetparent as $vetitem):
+//
+//            $vettitle=$vetitem['title_for_vet'];
+//            $imagetitle=$vetitem['image_for_vet'];
+//            $vetnew=[];
+//            $vetnew['image'] = $imagetitle;
+//            $vetnew['title'] = $vettitle;
+//
+//            $vet[]=$vetnew;
+//
+//        endforeach;
+//
+//        $petparent=[];
+//
+//        $pet=get_field('for_pet_parent');
+//
+//        foreach($pet as $item):
+//            $aboutpet=$item['about_pet'];
+//            $imageaboutpet=$item['image_about_pet'];
+//            $petnew=[];
+//            $petnew['image']=$imageaboutpet;
+//            $petnew['title']=$aboutpet;
+//
+//            $petparent[]=$petnew;
+//        endforeach;
+//
+//        $globalpet=[];
+//        $globalpet['vet']=$vet;
+//        $globalpet['pet-parent']=$petparent;
+//        $result= json_encode($globalpet);
+//        ?>
+<!---->
+<!--        -->
