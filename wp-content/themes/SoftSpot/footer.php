@@ -63,14 +63,11 @@
 </div>
 <!-- /popup -->
 
-<script src="js/vendors/jquery-3.3.1.min.js"></script>
-<script src="js/common.min.js"></script>
-
-<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
-<script type="text/javascript">
-    window.dojoRequire(["mojo/signup-forms/Loader"], function(L) {
-        L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"ec0afb756aedf79132593cfff","lid":"82f3380086","uniqueMethods":true}) })
-</script>
+<!--<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>-->
+<!--<script type="text/javascript">-->
+<!--    window.dojoRequire(["mojo/signup-forms/Loader"], function(L) {-->
+<!--        L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"ec0afb756aedf79132593cfff","lid":"82f3380086","uniqueMethods":true}) })-->
+<!--</script>-->
 
 </body>
 </html>
