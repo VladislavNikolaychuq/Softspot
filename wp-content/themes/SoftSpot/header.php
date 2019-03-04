@@ -1,5 +1,4 @@
-<?php
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,9 +31,7 @@
     <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="css/swiper.min.css">
-    <link rel="stylesheet" href="css/preload.css">
-    <link rel="stylesheet" href="css/common.css">
+
     <?php wp_head()?>
 </head>
 <body>
@@ -46,7 +43,7 @@
     <header id="site-header" class="is-loading">
 
         <h1 id="logo">
-            <img src="img/logo-soft-spot.svg" alt="Soft-Spot"/>
+            <img src="<?= DIRECT ?>img/logo-soft-spot.svg" alt="Soft-Spot"/>
         </h1>
 
         <div id="site-header__mobile-wrap">
