@@ -607,39 +607,39 @@ $vet_consultation=get_field('vet_consultation');
 
 
 <?php
-//$vet=[];
-//        $vetparent= get_field('for_vet');
-//
-//        foreach($vetparent as $vetitem):
-//
-//            $vettitle=$vetitem['title_for_vet'];
-//            $imagetitle=$vetitem['image_for_vet'];
-//            $vetnew=[];
-//            $vetnew['image'] = $imagetitle;
-//            $vetnew['title'] = $vettitle;
-//
-//            $vet[]=$vetnew;
-//
-//        endforeach;
-//
-//        $petparent=[];
-//
-//        $pet=get_field('for_pet_parent');
-//
-//        foreach($pet as $item):
-//            $aboutpet=$item['about_pet'];
-//            $imageaboutpet=$item['image_about_pet'];
-//            $petnew=[];
-//            $petnew['image']=$imageaboutpet;
-//            $petnew['title']=$aboutpet;
-//
-//            $petparent[]=$petnew;
-//        endforeach;
-//
-//        $globalpet=[];
-//        $globalpet['vet']=$vet;
-//        $globalpet['pet-parent']=$petparent;
-//        $result= json_encode($globalpet);
+$vet=[];
+        $vetparent= get_field('for_vet');
+
+        foreach($vetparent as $vetitem):
+
+            $vettitle=$vetitem['title_for_vet'];
+            $imagetitle=$vetitem['image_for_vet'];
+            $vetnew=[];
+            $vetnew['image'] = $imagetitle;
+            $vetnew['title'] = $vettitle;
+
+            $vet[]=$vetnew;
+
+        endforeach;
+
+        $petparent=[];
+
+        $pet=get_field('for_pet_parent');
+
+        foreach($pet as $item):
+            $aboutpet=$item['about_pet'];
+            $imageaboutpet=$item['image_about_pet'];
+            $petnew=[];
+            $petnew['image']=$imageaboutpet;
+            $petnew['title']=$aboutpet;
+
+            $petparent[]=$petnew;
+        endforeach;
+
+        $globalpet=[];
+        $globalpet['vet']=$vet;
+        $globalpet['pet-parent']=$petparent;
+        $result= json_encode($globalpet);
 //        ?>
 <!---->
 <!--        -->

@@ -3,20 +3,7 @@
 
 get_header();?>
 <?php
-function getBlogPosts($page)
-{
-    $pets = new WP_Query(array(
-            'paged' =>$page,
-            'numberposts' => 6,
-            'orderby' => 'date',
-            'order' => 'DESC',
-            'post_type' => 'post',
-            'fields' => 'ids',
-            'suppress_filters' => true,
-            'post_status' => 'publish'
-    ));
-    return $pets;
-}
+
 
 $pets = getBlogPosts(1);
 
@@ -46,8 +33,8 @@ $pets = getBlogPosts(1);
                             $get_permalink = get_permalink($petID);
                             $description_posts = get_field('description_posts', $petID);
                             $title = get_the_title($petID);
-                            $twitter_link_site=get_field('twitter_link_site',$petID)
-//                            $date = get_field('date_blog',$petID)
+                            $twitter_link_site=get_field('twitter_link_site',$petID);
+                            $date = get_field('date_blog',$petID)
 
                             ?>
 
@@ -59,15 +46,8 @@ $pets = getBlogPosts(1);
 
                                 <div class="blog__item-wrap">
 
-<!---->
-<!--                                    --><?php
-//                                    $socialData = [];
-//                                    $socialData['title'] = strip_tags($title);
-//                                    $socialData['text'] = strip_tags($description_posts);
-//                                    $socialData['url'] = get_permalink();
-//                                    $socialData['image'] = $image_blog;
-//                                    $socialData = json_encode($socialData);
-//                                    ?>
+
+
                                     <div class="blog__info">
                                         <time class="blog__date" datetime="2018-10-23"><?= get_the_date('Y-m-d')?></time>
                                         <a href="<?=$twitter_link_site?>" class="twttr">
@@ -179,19 +159,6 @@ Follow @softspotapp
                 </div>
                 <!-- /search -->
 
-                <!-- blog-categories -->
-                <section class="aside-section">
-
-                    <h3 class="aside-section__topic">Categories</h3>
-
-                    <div class="aside-section__list categories">
-                        <a href="#" class="aside-section__item categories__item is-active">All (36)</a>
-                        <a href="#" class="aside-section__item categories__item">Pet Owner Tips (24)</a>
-                        <a href="#" class="aside-section__item categories__item">Veterinary Tips (12)</a>
-                    </div>
-
-                </section>
-                <!-- /blog-categories -->
 
                 <!-- top-articles -->
                 <section class="aside-section">

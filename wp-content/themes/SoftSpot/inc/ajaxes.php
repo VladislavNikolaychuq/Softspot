@@ -1,97 +1,90 @@
 <?php
-//
-//add_action('wp_ajax_get_posts_autocomplete', 'get_posts_autocomplete');
-//
-//add_action('wp_ajax_nopriv_get_posts_autocomplete', 'get_posts_autocomplete');
-//
-//add_action('wp_ajax_get_filter_result', 'get_filter_result');
-//
-//add_action('wp_ajax_nopriv_get_filter_result', 'get_filter_result');
-//
-//
-//function get_posts_autocomplete (){
-//
-//    $query = $_POST['search_value'];
-//
-//    $parameters = array(
-//        'post_type' => 'tours',
-//        'post_status' => 'publish',
-//        's' => $query,
-//        'fields' => 'ids'
-//    );
-//
-//    $toursQuery = get_posts($parameters);
-//    $tours = [];
-//    $tours['tours'] = [];
-//    foreach ($toursQuery as $postID) {
-//        $tourItem = [];
-//        $tourItem['link'] = get_permalink($postID);
-//        $tourItem['title'] = get_the_title($postID);
-//        $tourItem['image'] = get_field('tour_image', $postID);
-//        $tourItem['cookingTime'] = "Cooking Time: 20 Minutes";
-//        $tours['tours'][] = $tourItem;
-//    }
-//    $out = json_encode($tours);
-//    echo $out;
-//    exit;
-//
-//}
-//
-//function get_filter_result () {
-//
-//    $categoryString =  str_replace('\"', '', $_POST['category']);
-//    $category = json_decode($categoryString);
-//    $cityTermsID = $category[0];
-//    $directionTemrsID = $category[1];
-//    $typeTemrsID = $category[2];
-//
-//    $parameters = array(
-//        'post_type' => 'tours',
-//        'posts_per_page' => -1,
-//        'post_status' => 'publish',
-//        'fields' => 'ids');
-//
-//    $taxQuery = array('relation' => 'AND');
-//
-//    if ($cityTermsID != -1) {
-//        $taxQuery[] = array(
-//            'taxonomy' => 'city',
-//            'field' => 'term_id',
-//            'terms' => array($cityTermsID)
-//
-//        );
-//    }
-//    if ($directionTemrsID != -1) {
-//        $taxQuery[] = array(
-//            'taxonomy' => 'direction',
-//            'field' => 'term_id',
-//            'terms' => array($directionTemrsID)
-//
-//        );
-//    }
-//    if ($typeTemrsID != -1) {
-//
-//        $taxQuery[] = array(
-//            'taxonomy' => 'type',
-//            'field' => 'term_id',
-//            'terms' => array($typeTemrsID)
-//        );
-//    }
-//
-//    if (!($typeTemrsID == -1 && $directionTemrsID == -1 && $cityTermsID == -1)) {
-//        $parameters["tax_query"] = $taxQuery;
-//    }
-//
-//    $result = array(
-//        "result" => count(get_posts($parameters))
-//    );
-//
-//    $result = json_encode($result);
-//    echo $result;
-//    exit;
-//
-//}
-//
-//
+add_action('wp_ajax_get_posts_by_category', 'get_posts_by_category');
 
+add_action('wp_ajax_nopriv_get_posts_by_category', 'get_posts_by_category');
+
+function getBlogPosts($page)
+{
+    $pets = new WP_Query(array(
+        'paged' =>$page,
+        'posts_per_page' => 2,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'post_type' => 'post',
+        'fields' => 'ids',
+        'suppress_filters' => true,
+        'post_status' => 'publish'
+    ));
+    return $pets;
+}
+
+
+function get_posts_by_category (){
+
+    $page = $_POST["page"];
+
+    $newpets = [];
+
+    $pets = getBlogPosts($page);
+
+
+        foreach ($pets->posts as $petID){
+            $image_blog = get_field('image_blog', $petID);
+            $get_permalink = get_permalink($petID);
+            $description_posts = get_field('description_posts', $petID);
+            $title = get_the_title($petID);
+            $date = get_field('date_blog',$petID);
+
+
+            $pet = [];
+            $pet['link'] = $get_permalink;
+            $pet['image'] =$image_blog ;
+            $pet['title'] = $title;
+            $pet['content']=$description_posts;
+            $pet['date']=$date;
+            $newpets[]=$pet;
+        }
+
+
+
+
+    $global=[];
+   $global['blog']=$newpets;
+   $global ['maxPages']=$pets->max_num_pages;
+    $result= json_encode($global);
+    echo $result ;
+    exit;
+}
+
+function getSearchPosts()
+{
+    $search = get_posts(array(
+        'posts_per_page' => -1,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'post_type' => 'post',
+        'fields' => 'ids',
+        'suppress_filters' => true,
+        'post_status' => 'publish',
+        's' => 'keyword'
+    ));
+    return $search;
+}
+
+
+
+function get_search_by_category (){
+
+    $newSearcher = [];
+
+
+    $search = getSearchPosts();
+
+    foreach ($search as $item) {
+        $newSearcher['link'] =get_permalink($item);
+        $newSearcher['title'] = get_the_title($item);
+
+    }
+    $result= json_encode($newSearcher);
+}
 
