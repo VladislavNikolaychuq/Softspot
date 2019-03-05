@@ -382,23 +382,35 @@ $vet_consultation=get_field('vet_consultation');
         </div>
 
         <div class="tabs">
-            <?php if( have_rows('preview') ): ?>
+
+
+
             <div class="tabs__item-wrap">
+                
                 <div class="swiper-container">
+
                     <div class="swiper-wrapper">
-                        <?php while ( have_rows('preview') ) : the_row();
-                        $name_preview = get_sub_field('name_preview');
-                        $about_preview = get_sub_field('about_preview');
-                        $price_preview = get_sub_field('price_preview');
-                        $named_description= get_sub_field('named_description');
-                        ?>
-                        <span role="tab" class="tabs__item swiper-slide"><?=$name_preview?></span>
+
+            <?php
+            $repeater=get_field('preview');
+
+            foreach ($repeater as $item) {
+
+           ?>
+                <span role="tab" class="tabs__item swiper-slide"><?=$item['name_preview']?></span>
+
+            <?php   }  ?>
+
                     </div>
                 </div>
             </div>
 
             <!-- tabs__wrap -->
             <div class="tabs__wrap">
+
+                <?php  foreach ($repeater as $item) {
+
+                ?>
 
                 <div class="tabs__content">
 
@@ -408,13 +420,13 @@ $vet_consultation=get_field('vet_consultation');
 
                             <div class="services__text">
 
-                                <?=$named_description?>
+                                <?=$item['named_description']?>
 
                             </div>
 
                             <div class="services__includes">
 
-                             <?=$about_preview?>
+                                <?=$item['about_preview']?>
 
                             </div>
 
@@ -422,21 +434,20 @@ $vet_consultation=get_field('vet_consultation');
 
                         <div class="services__aside">
 
-                          <?=$price_preview ?>
+                            <?=$item['price_preview']?>
 
                         </div>
 
                     </article>
 
                 </div>
-
-
+                <?php   }  ?>
 
             </div>
             <!-- /tabs__wrap -->
-        <?php endwhile; ?>
+
         </div>
-        <?php endif; ?>
+
 
         <div id="services__back">
             <div>
@@ -509,7 +520,7 @@ $vet_consultation=get_field('vet_consultation');
 
         <div id="download-app__content">
 
-            <p>Download app</p>
+            <p><?= $title_ending=get_field('title_for_ending')?></p>
 
             <div id="download-app__link">
 
@@ -538,9 +549,65 @@ $vet_consultation=get_field('vet_consultation');
         <a href="#" class="btn btn_color-1"><span>sign up as pet parent</span></a>
         <a href="#" class="btn btn_color-2"><span>sign up as vet</span></a>
 
-<!--   --><?php //get_footer()?>
-<!--        --><?php
-//        $vet=[];
+    </footer>
+        <!-- popup -->
+        <div id="popup" class="is-loading">
+
+            <!-- popup__wrap -->
+            <div id="popup__wrap">
+
+                <!-- popup__content -->
+                <section class="popup__content popup__subscribe popup_subscribe">
+
+                    <div class="popup__content-subscribe">
+
+                        <div class="popup__content-text">
+                            <h3>Subscribe</h3>
+                            <p>We're still building! Subscribe to get updates and offers for when we launch!</p>
+                        </div>
+
+                        <form class="popup__subscribe-form" novalidate>
+                            <input type="email" placeholder="email address" required>
+                            <button type="submit" class="btn btn_color-2"><span>subscribe</span></button>
+                        </form>
+
+                        <div class="loader">
+                            <div class="loader__wrap"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="popup__content-thanks">
+
+                        <div class="popup__content-text">
+                            <h3>Thank you.</h3>
+                            <p>We’ll reach out to you shortly.</p>
+                        </div>
+
+                    </div>
+
+                    <span class="popup__close"></span>
+
+                </section>
+                <!-- /popup__content -->
+
+            </div>
+            <!-- /popup__wrap -->
+
+        </div>
+        <!-- /popup -->
+
+        <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+        <script type="text/javascript">
+            window.dojoRequire(["mojo/signup-forms/Loader"], function(L) {
+                L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"ec0afb756aedf79132593cfff","lid":"82f3380086","uniqueMethods":true}) })
+        </script>
+
+   <?php get_footer()?>
+
+
+<?php
+//$vet=[];
 //        $vetparent= get_field('for_vet');
 //
 //        foreach($vetparent as $vetitem):
@@ -576,3 +643,14 @@ $vet_consultation=get_field('vet_consultation');
 //        ?>
 <!---->
 <!--        -->
+//
+
+
+
+
+
+
+
+
+
+

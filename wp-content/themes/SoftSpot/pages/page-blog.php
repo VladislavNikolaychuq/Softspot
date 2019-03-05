@@ -1,7 +1,7 @@
 <?php
 //Template Name: Blog page
 
-
+get_header();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,8 +35,7 @@
     <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="css/preload.css">
-    <link rel="stylesheet" href="css/common.css">
+
 
 </head>
 <body>
@@ -48,7 +47,7 @@
         <header id="site-header">
 
             <a href="#" id="logo">
-                <img src="img/logo-soft-spot.svg" alt="Soft-Spot"/>
+                <img src="<?= DIRECT?>img/logo-soft-spot.svg" alt="Soft-Spot"/>
             </a>
 
             <div id="site-header__mobile-wrap">
@@ -156,7 +155,7 @@
                             <article class="blog__item">
 
                                 <a href="#" class="blog__picture">
-                                    <img src="https://softspotapp.com/blog/wp-content/uploads/2018/12/1.png" alt="img"/>
+                                    <img src="<?= DIRECT?>https://softspotapp.com/blog/wp-content/uploads/2018/12/1.png" alt="img"/>
                                 </a>
 
                                 <div class="blog__item-wrap">
@@ -194,7 +193,7 @@ Follow @softspotapp
                             <article class="blog__item">
 
                                 <a href="#" class="blog__picture">
-                                    <img src="https://softspotapp.com/blog/wp-content/uploads/2018/12/1.png" alt="img"/>
+                                    <img src="<?= DIRECT?>https://softspotapp.com/blog/wp-content/uploads/2018/12/1.png" alt="img"/>
                                 </a>
 
                                 <div class="blog__item-wrap">
@@ -441,10 +440,12 @@ Follow @softspotapp
 
     </div>
     <!-- /popup -->
-
-    <script src="js/vendors/jquery-3.3.1.min.js"></script>
-    <script src="js/vendors/perfect-scrollbar.min.js"></script>
-    <script src="js/blog.min.js"></script>
+    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+    <script type="text/javascript">
+        window.dojoRequire(["mojo/signup-forms/Loader"], function(L) {
+            L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"ec0afb756aedf79132593cfff","lid":"82f3380086","uniqueMethods":true}) })
+    </script>
+    <?php get_footer()?>
 
 </body>
 </html>

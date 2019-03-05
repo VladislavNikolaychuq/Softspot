@@ -18,46 +18,46 @@ function addScripts(){
     wp_enqueue_style('preload_css');
     wp_enqueue_style('swiper_css');
     wp_enqueue_style('common_css');
-    wp_enqueue_style('preload_blog_css');
+//    wp_enqueue_style('preload_blog_css');
 
 
     wp_enqueue_script('jquery');
-    wp_enqueue_script('swiper_js');
-    wp_enqueue_script('scrollbar_js');
+//    wp_enqueue_script('swiper_js');
+//    wp_enqueue_script('scrollbar_js');
 //    wp_enqueue_script('blog_js');
     wp_enqueue_script('index_js');
 
 
 
-//
-//    if (is_page_template(['pages/page-blog.php','pages/page-home.php',
-//
-//    ])) {
-//        wp_enqueue_style('preload_css');
-//    }
-//
-//
-//
-//    if (is_page_template(['pages/page-blog.php','pages/page-home.php'
-//
-//    ])) {
-//        wp_enqueue_style('common_css');
-//    }
-//
-//
-//
-//    if (is_page_template(['pages/page-blog.php','pages/page-home.php'
-//
-//    ])) {
-//        wp_enqueue_style('swiper_css');
-//    }
-//
-//
-//    if (is_page_template(['pages/page-blog.php'
-//
-//    ])) {
-//        wp_enqueue_style('preload_blog_css');
-//    }
+
+    if (is_page_template(['pages/page-blog.php',
+
+    ])) {
+        wp_enqueue_script('swiper_js');
+    }
+
+
+
+    if (is_page_template(['pages/page-blog.php'
+
+    ])) {
+        wp_enqueue_script('scrollbar_js');
+    }
+
+
+
+    if (is_page_template(['pages/page-blog.php'
+
+    ])) {
+       wp_enqueue_script('blog_js');
+    }
+
+
+    if (is_page_template(['pages/page-blog.php'
+
+    ])) {
+        wp_enqueue_style('preload_blog_css');
+    }
 
 
 
