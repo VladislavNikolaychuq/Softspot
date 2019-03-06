@@ -3,6 +3,10 @@ add_action('wp_ajax_get_posts_by_category', 'get_posts_by_category');
 
 add_action('wp_ajax_nopriv_get_posts_by_category', 'get_posts_by_category');
 
+add_action('wp_ajax_get_search_result', 'get_search_result');
+
+add_action('wp_ajax_nopriv_get_search_result', 'get_search_result');
+
 function getBlogPosts($page)
 {
     $pets = new WP_Query(array(
@@ -56,7 +60,7 @@ function get_posts_by_category (){
     exit;
 }
 
-function getSearchPosts()
+function getSearchPosts($searchValue)
 {
     $search = get_posts(array(
         'posts_per_page' => -1,
@@ -66,25 +70,47 @@ function getSearchPosts()
         'fields' => 'ids',
         'suppress_filters' => true,
         'post_status' => 'publish',
-        's' => 'keyword'
+        's' => $searchValue
     ));
     return $search;
 }
 
 
 
-function get_search_by_category (){
-
+function get_search_result (){
+$searchValue= $_POST['search_value'];
     $newSearcher = [];
 
 
-    $search = getSearchPosts();
+    $search = getSearchPosts($searchValue);
 
     foreach ($search as $item) {
-        $newSearcher['link'] =get_permalink($item);
-        $newSearcher['title'] = get_the_title($item);
+        $simplesearch = [];
+        $simplesearch['link'] =get_permalink($item);
+        $simplesearch['title'] = get_the_title($item);
 
+        $newSearcher[]=$simplesearch;
     }
-    $result= json_encode($newSearcher);
+    $blog=[];
+
+    $blog['result']=$newSearcher;
+
+    $result= json_encode($blog);
+    echo $result;
+    exit;
+
 }
+function getAllEpisodes()
+{
+    $args = array(
+        'post_type' => 'post', // тип постов - записи
+        'posts_per_page' => -1,
+        'fields' => 'ids',
+        'post_status' => 'publish',
+        'suppress_filters'=> true
+    );
+
+    return get_posts($args);
+}
+
 

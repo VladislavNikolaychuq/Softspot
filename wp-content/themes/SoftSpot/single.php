@@ -1,75 +1,187 @@
 <?php
-get_header()
+get_header();
+
+
+$image_blog = get_field('image_blog');
+$get_permalink = get_permalink();
+$description_posts = get_field('description_posts');
+$title = get_the_title();
+$twitter_link_site=get_field('twitter_link_site');
+$date = get_the_date('M d,Y');
+
+
+
 ?>
-    <div id="site__wrap">
+<header id="site-header">
+
+    <a href="https://softspotapp.com" id="logo">
+        <img src="https://softspotapp.com/wp-content/themes/soft-spot/assets/dist/img/logo-soft-spot.svg" alt="Soft-Spot">
+    </a>
+
+    <div id="site-header__mobile-wrap">
+
+        <div id="site-header__mobile-layout">
+
+            <div id="site-header__sign-up">
+                <p>sign up as</p>
+
+                <div>
+                    <a href="#" class="popup__open" data-popup="subscribe"><span>Pet Parent</span></a>
+                    <a href="#" class="popup__open" data-popup="subscribe"><span>Vet</span></a>
+                </div>
+
+            </div>
+
+            <div id="site-header__wrap">
+
+                <a href="tel:8665852579" id="site-header__phone">(866) 585-2579</a>
+
+                <nav id="menu">
+                    <ul>
+
+
+                        <li>
+
+                            <a href="<?= get_permalink(HOME)?>">Home</a>
+
+
+                        </li>
+
+
+                        <li class="is-active">
+
+                            <a href="<?= get_permalink(BLOG)?>">Blog</a>
+
+                            <div class="menu__cat"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.76 22.2">
+                                    <path d="M3.09,15.5a11.72,11.72,0,0,0,1.6,6.4.86.86,0,0,0,.6.3h0c.1,0,.2-.1.3-.1a21.65,21.65,0,0,0,3.8-4c.4.1.9.1,1.6.2h2.7a20.9,20.9,0,0,0,2.5-.1,5.21,5.21,0,0,0,1.4-.2,21.33,21.33,0,0,0,3.8,4,.52.52,0,0,0,.4.2c.2,0,.3-.1.4-.3a11.94,11.94,0,0,0,1.6-6.4c3.4-5.9,3.1-10.1,2.8-14.5V.5A.56.56,0,0,0,26,0h0a.56.56,0,0,0-.5.6v.6c.3,4.4.6,8.2-2.7,13.9a.37.37,0,0,0-.1.3,12.57,12.57,0,0,1-1.1,5.3,18.48,18.48,0,0,1-3.3-3.5.78.78,0,0,0-.7-.3,4.23,4.23,0,0,1-1.6.2,19.27,19.27,0,0,1-2.4.1H11a5.42,5.42,0,0,1-1.7-.2.52.52,0,0,0-.7.3,17,17,0,0,1-3.2,3.5,12.78,12.78,0,0,1-1.2-5.2.76.76,0,0,0-.1-.4C.39,8.6.89,5,1.49.8a.6.6,0,0,0-.1-.4A.52.52,0,0,0,1,.2a.6.6,0,0,0-.4.1.52.52,0,0,0-.2.4C-.31,5.4-.41,9.1,3.09,15.5Z"></path>
+                                    <path d="M12.39,12.1a.76.76,0,0,0,.4-.2,4.35,4.35,0,0,1,.6-.7l.7.7a.52.52,0,0,0,.4.2c.2,0,.3,0,.4-.1a.52.52,0,0,0,.2-.4c0-.2,0-.3-.1-.4a3.18,3.18,0,0,0-1-1V9.3c.1-.2.1-.3.2-.5a3,3,0,0,1,.4-.8.6.6,0,0,0,.1-.4.76.76,0,0,0-.2-.4.37.37,0,0,0-.3-.1c-.2,0-.3.1-.5.2a2.19,2.19,0,0,1-.3.5c-.1-.2-.2-.3-.3-.5a.66.66,0,0,0-.7-.2.72.72,0,0,0-.2.8.76.76,0,0,1,.2.4,3.51,3.51,0,0,0,.5.8V10a6.47,6.47,0,0,0-.8.9l-.1.2a.64.64,0,0,0,0,.6C12,12.1,12.19,12.2,12.39,12.1Z"></path>
+                                </svg>
+                                <span class="menu__cat-eye-left"></span>
+                                <span class="menu__cat-eye-right"></span>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+    </div>
+
+    <span id="hamburger">
+                <span></span>
+            </span>
+
+</header>
+
+<div id="site__wrap" data-action="<?php echo admin_url( 'admin-ajax.php' ); ?>">
+
 
         <!-- page-head -->
         <div id="page-head">
-            <a href="#" id="page-head__back">Back to blog</a>
+            <a href="<?= get_permalink(82)?>" id="page-head__back">Back to blog</a>
 
-            <div class="social">
-                <a href="#" class="social__item">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                                    <path d="M256,49.5c67.3,0,75.2,0.3,101.8,1.5c24.6,1.1,37.9,5.2,46.8,8.7c11.8,4.6,20.2,10,29,18.8c8.8,8.8,14.3,17.2,18.8,29
-                                        c3.4,8.9,7.6,22.2,8.7,46.8c1.2,26.6,1.5,34.5,1.5,101.8s-0.3,75.2-1.5,101.8c-1.1,24.6-5.2,37.9-8.7,46.8
-                                        c-4.6,11.8-10,20.2-18.8,29c-8.8,8.8-17.2,14.3-29,18.8c-8.9,3.4-22.2,7.6-46.8,8.7c-26.6,1.2-34.5,1.5-101.8,1.5
-                                        s-75.2-0.3-101.8-1.5c-24.6-1.1-37.9-5.2-46.8-8.7c-11.8-4.6-20.2-10-29-18.8c-8.8-8.8-14.3-17.2-18.8-29
-                                        c-3.4-8.9-7.6-22.2-8.7-46.8c-1.2-26.6-1.5-34.5-1.5-101.8s0.3-75.2,1.5-101.8c1.1-24.6,5.2-37.9,8.7-46.8
-                                        c4.6-11.8,10-20.2,18.8-29c8.8-8.8,17.2-14.3,29-18.8c8.9-3.4,22.2-7.6,46.8-8.7C180.8,49.7,188.7,49.5,256,49.5 M256,4.1
-                                        c-68.4,0-77,0.3-103.9,1.5C125.3,6.8,107,11.1,91,17.3c-16.6,6.4-30.6,15.1-44.6,29.1c-14,14-22.6,28.1-29.1,44.6
-                                        c-6.2,16-10.5,34.3-11.7,61.2C4.4,179,4.1,187.6,4.1,256c0,68.4,0.3,77,1.5,103.9c1.2,26.8,5.5,45.1,11.7,61.2
-                                        c6.4,16.6,15.1,30.6,29.1,44.6c14,14,28.1,22.6,44.6,29.1c16,6.2,34.3,10.5,61.2,11.7c26.9,1.2,35.4,1.5,103.9,1.5
-                                        s77-0.3,103.9-1.5c26.8-1.2,45.1-5.5,61.2-11.7c16.6-6.4,30.6-15.1,44.6-29.1c14-14,22.6-28.1,29.1-44.6
-                                        c6.2-16,10.5-34.3,11.7-61.2c1.2-26.9,1.5-35.4,1.5-103.9s-0.3-77-1.5-103.9c-1.2-26.8-5.5-45.1-11.7-61.2
-                                        c-6.4-16.6-15.1-30.6-29.1-44.6c-14-14-28.1-22.6-44.6-29.1c-16-6.2-34.3-10.5-61.2-11.7C333,4.4,324.4,4.1,256,4.1L256,4.1z"/>
-                        <path d="M256,126.6c-71.4,0-129.4,57.9-129.4,129.4S184.6,385.4,256,385.4S385.4,327.4,385.4,256S327.4,126.6,256,126.6z M256,340
-                                        c-46.4,0-84-37.6-84-84s37.6-84,84-84c46.4,0,84,37.6,84,84S302.4,340,256,340z"/>
-                        <circle cx="390.5" cy="121.5" r="30.2"/>
-                                </svg>
-                </a>
-                <a href="#" class="social__item">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 266.9 266.9" style="enable-background:new 0 0 266.9 266.9;" xml:space="preserve">
-                                    <path d="M252.2,0H14.7C6.6,0,0,6.6,0,14.7v237.4c0,8.1,6.6,14.7,14.7,14.7h127.8V163.5h-34.8v-40.3h34.8
-                                        V93.6c0-34.5,21.1-53.2,51.8-53.2c14.7,0,27.4,1.1,31.1,1.6v36l-21.3,0c-16.7,0-20,7.9-20,19.6v25.7H224l-5.2,40.3h-34.7v103.4h68
-                                    c8.1,0,14.7-6.6,14.7-14.7V14.7C266.9,6.6,260.3,0,252.2,0z"/>
-                                </svg>
-                </a>
-                <a href="#" class="social__item">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.3 40" style="enable-background:new 0 0 49.3 40;" xml:space="preserve">
-                                    <path d="M49.3,4.7c-1.8,0.8-3.8,1.3-5.8,1.6c2.1-1.2,3.7-3.2,4.4-5.6c-2,1.2-4.1,2-6.4,2.5C39.6,1.2,37,0,34.1,0
-                                        C28.5,0,24,4.5,24,10.1c0,0.8,0.1,1.6,0.3,2.3C15.9,12,8.4,8,3.4,1.8C2.6,3.3,2.1,5.1,2.1,6.9c0,3.5,1.8,6.6,4.5,8.4
-                                        c-1.7-0.1-3.2-0.5-4.6-1.3c0,0,0,0.1,0,0.1c0,4.9,3.5,9,8.1,9.9c-0.8,0.2-1.7,0.4-2.7,0.4c-0.7,0-1.3-0.1-1.9-0.2c1.3,4,5,6.9,9.4,7
-                                        c-3.5,2.7-7.8,4.3-12.6,4.3c-0.8,0-1.6,0-2.4-0.1C4.5,38.4,9.8,40,15.5,40c18.6,0,28.8-15.4,28.8-28.8c0-0.4,0-0.9,0-1.3
-                                        C46.2,8.5,47.9,6.8,49.3,4.7z"/>
-                                </svg>
-                </a>
-                <a href="#" class="social__item">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 430.1 411" style="enable-background:new 0 0 430.1 411;" xml:space="preserve">
-                                    <path d="M430.1,252v159h-92.2V262.6c0-37.3-13.3-62.7-46.7-62.7c-25.5,0-40.6,17.1-47.3,33.7
-                                        c-2.4,5.9-3.1,14.2-3.1,22.5V411h-92.2c0,0,1.2-251.3,0-277.3h92.2V173c-0.2,0.3-0.4,0.6-0.6,0.9h0.6V173
-                                        c12.3-18.9,34.1-45.8,83.1-45.8C384.6,127.2,430.1,166.8,430.1,252z M52.2,0C20.6,0,0,20.7,0,47.9c0,26.6,20,47.9,51,47.9h0.6
-                                        c32.2,0,52.2-21.3,52.2-47.9C103.1,20.7,83.7,0,52.2,0z M5.5,411h92.2V133.7H5.5V411z"/>
-                                </svg>
-                </a>
-            </div>
-
-        </div>
+            <?php get_template_part ('components/content','social-links');?>
         <!-- /page-head -->
 
-        <!-- site__content -->
-        <div id="site__content">
+            <div id="site__content">
 
-            <div id="post">
+                <div id="post">
+
+                    <div id="post__head">
+
+                        <div id="post__info">
+                            <time id="post__date" datetime="2019-03-04"><?=$date ?></time>
 
 
-                <article id="article">
+                        </div>
 
-                </article>
+                        <h1 id="post__title"><?= $title?></h1>
 
-            </div>
+                        <a href="https://twitter.com/softspotapp" class="twttr">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.3 40" style="enable-background:new 0 0 49.3 40;" xml:space="preserve">
+                                            <path d="M49.3,4.7c-1.8,0.8-3.8,1.3-5.8,1.6c2.1-1.2,3.7-3.2,4.4-5.6c-2,1.2-4.1,2-6.4,2.5C39.6,1.2,37,0,34.1,0
+                                                C28.5,0,24,4.5,24,10.1c0,0.8,0.1,1.6,0.3,2.3C15.9,12,8.4,8,3.4,1.8C2.6,3.3,2.1,5.1,2.1,6.9c0,3.5,1.8,6.6,4.5,8.4
+                                                c-1.7-0.1-3.2-0.5-4.6-1.3c0,0,0,0.1,0,0.1c0,4.9,3.5,9,8.1,9.9c-0.8,0.2-1.7,0.4-2.7,0.4c-0.7,0-1.3-0.1-1.9-0.2c1.3,4,5,6.9,9.4,7
+                                                c-3.5,2.7-7.8,4.3-12.6,4.3c-0.8,0-1.6,0-2.4-0.1C4.5,38.4,9.8,40,15.5,40c18.6,0,28.8-15.4,28.8-28.8c0-0.4,0-0.9,0-1.3
+                                                C46.2,8.5,47.9,6.8,49.3,4.7z"></path>
+                                        </svg>
+                            Follow @softspotapp
+                        </a>
 
+                    </div>
+
+                    <div id="post__thumb">
+
+                        <p><img src="<?=$image_blog ?>" alt="Keeping Your Pet Safe From Rattlesnake Bites"></p>
+
+                    </div>
+
+                    <article id="article">
+                        <?=$text_about = get_field('text_about');?>
+                        <p></p>
+                        <div class="heateorFfcClear"></div><div style="width:100%;text-align:left;" class="heateor_ffc_facebook_comments"><h4 class="heateor_ffc_facebook_comments_title" style="padding:10px;font-family:Arial,Helvetica Neue,Helvetica,sans-serif;">Facebook Comments</h4><script type="text/javascript">!function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||(o=e.createElement(n),o.id=t,o.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script><div class="fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop" data-href="https://softspotapp.com/keeping-your-pet-safe-from-rattlesnake-bites/" data-colorscheme="light" data-numposts="" data-width="100%" data-order-by="social" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;color_scheme=light&amp;container_width=568&amp;height=100&amp;href=https%3A%2F%2Fsoftspotapp.com%2Fkeeping-your-pet-safe-from-rattlesnake-bites%2F&amp;locale=en_US&amp;order_by=social&amp;sdk=joey&amp;version=v3.2" style="width: 100%;"><span style="vertical-align: bottom; width: 100%; height: 179px;"><iframe name="f35ea3b7f100094" width="1000px" height="100px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:comments Facebook Social Plugin" src="https://www.facebook.com/v3.2/plugins/comments.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2Fvy-MhgbfL4v.js%3Fversion%3D44%23cb%3Df11749f87168d84%26domain%3Dsoftspotapp.com%26origin%3Dhttps%253A%252F%252Fsoftspotapp.com%252Ff29e82adee62e98%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=568&amp;height=100&amp;href=https%3A%2F%2Fsoftspotapp.com%2Fkeeping-your-pet-safe-from-rattlesnake-bites%2F&amp;locale=en_US&amp;order_by=social&amp;sdk=joey&amp;version=v3.2" style="border: none; visibility: visible; width: 100%; height: 179px;" class=""></iframe></span></div></div><div class="heateorFfcClear"></div>
+                    </article>
+
+                    <div style="" class="heateor_ffc_facebook_comments"><style type="text/css">.fb-comments,.fb-comments span,.fb-comments span iframe[style]{min-width:100%!important;width:100%!important}</style><script type="text/javascript">!function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||(o=e.createElement(n),o.id=t,o.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script><div class="fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop" data-href="https://softspotapp.com/keeping-your-pet-safe-from-rattlesnake-bites/" data-numposts="" data-colorscheme="light" data-order-by="social" data-width="100%" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;color_scheme=light&amp;container_width=654&amp;height=100&amp;href=https%3A%2F%2Fsoftspotapp.com%2Fkeeping-your-pet-safe-from-rattlesnake-bites%2F&amp;locale=en_US&amp;order_by=social&amp;sdk=joey&amp;version=v3.2" style="width: 100%;"><span style="vertical-align: bottom; width: 100%; height: 179px;"><iframe name="f3e31408a585f58" width="1000px" height="100px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:comments Facebook Social Plugin" src="https://www.facebook.com/v3.2/plugins/comments.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2Fvy-MhgbfL4v.js%3Fversion%3D44%23cb%3Dfef749d4d3fedc%26domain%3Dsoftspotapp.com%26origin%3Dhttps%253A%252F%252Fsoftspotapp.com%252Ff29e82adee62e98%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=654&amp;height=100&amp;href=https%3A%2F%2Fsoftspotapp.com%2Fkeeping-your-pet-safe-from-rattlesnake-bites%2F&amp;locale=en_US&amp;order_by=social&amp;sdk=joey&amp;version=v3.2" style="border: none; visibility: visible; width: 100%; height: 179px;" class=""></iframe></span></div></div>
+                </div>
+
+
+
+
+
+
+                <div id="post-navigation" data-action="<?php echo admin_url( 'admin-ajax.php' ); ?>">
+<?php
+                    $allEpisodesIDs=getAllEpisodes();
+                    $currentID= get_the_ID();
+                    $prevPage=null;
+                    $nextPage=null;
+
+            for ($i = 0; $i < count($allEpisodesIDs); $i++) {
+
+                if($currentID==$allEpisodesIDs[$i]) {
+
+                    $prevPage=$allEpisodesIDs[$i-1];
+
+                    $nextPage=$allEpisodesIDs[$i+1];
+                }
+            }
+                    ?>
+
+
+
+                    <?php if(!is_null($nextPage)):?>
+                    <a href="<?= get_the_permalink($nextPage) ?>" data-id="<?= $nextPage ?>" title="<?=get_the_title($nextPage)?>">
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 68 44.3" style="enable-background:new 0 0 68 44.3;" xml:space="preserve">
+                <polyline points="41.5,3 65,22.6 42.4,41.3 "></polyline>
+                <line x1="65" y1="22.6" x2="2.5" y2="22.6"></line>
+            </svg>
+            <span>Next</span>
+        </span>
+
+
+                    </a>
+                    <?php endif; ?>
+
+            <?php if(!is_null($prevPage)):?>
+            <a href="<?= get_the_permalink($prevPage) ?>" data-id="<?= $prevPage ?>" title="<?=get_the_title($prevPage)?>">
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 68 44.3" style="enable-background:new 0 0 68 44.3;" xml:space="preserve">
+                <polyline points="41.5,3 65,22.6 42.4,41.3 "></polyline>
+                <line x1="65" y1="22.6" x2="2.5" y2="22.6"></line>
+            </svg>
+            <span>Previous</span>
+        </span>
+
+            </a>
+            <?php endif; ?>
         </div>
-        <!-- /site__content -->
+
+</div>
 
         <!-- site__aside -->
         <aside id="site__aside">
@@ -128,20 +240,6 @@ get_header()
 
             </div>
             <!-- /search -->
-
-            <!-- blog-categories -->
-            <section class="aside-section">
-
-                <h3 class="aside-section__topic">Categories</h3>
-
-                <div class="aside-section__list categories">
-                    <a href="#" class="aside-section__item categories__item is-active">All (36)</a>
-                    <a href="#" class="aside-section__item categories__item">Pet Owner Tips (24)</a>
-                    <a href="#" class="aside-section__item categories__item">Veterinary Tips (12)</a>
-                </div>
-
-            </section>
-            <!-- /blog-categories -->
 
             <!-- top-articles -->
             <section class="aside-section">
