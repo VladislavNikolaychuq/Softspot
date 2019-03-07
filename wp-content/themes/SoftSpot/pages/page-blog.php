@@ -1,6 +1,10 @@
 <?php
 //Template Name: Blog page
 
+<<<<<<< Updated upstream
+=======
+get_header('other');
+>>>>>>> Stashed changes
 
 ?>
 <!DOCTYPE html>
@@ -53,11 +57,16 @@
 
             <div id="site-header__mobile-wrap">
 
+<<<<<<< Updated upstream
                 <div id="site-header__mobile-layout">
+=======
+$pets = getBlogPosts(1,-1);
+>>>>>>> Stashed changes
 
                     <div id="site-header__sign-up">
                         <p>sign up as</p>
 
+<<<<<<< Updated upstream
                         <div>
                             <a href="#"><span>Pet Parent</span></a>
                             <a href="#"><span>Vet</span></a>
@@ -184,6 +193,10 @@ Follow @softspotapp
                                             <p>Depending on the time of year, temperatures in Arizona can climb into the triple digits for months on end. If you’re a pup parent of a long-haired dog who’s concerned about the comfort of your friend, you may have wondered: Should I shave my dog?</p>
 
                                         </div>
+=======
+?>
+
+>>>>>>> Stashed changes
 
                                     </a>
 
@@ -350,9 +363,18 @@ Follow @softspotapp
                     <h3 class="aside-section__topic">Categories</h3>
 
                     <div class="aside-section__list categories">
+<<<<<<< Updated upstream
                         <a href="#" class="aside-section__item categories__item is-active">All (36)</a>
                         <a href="#" class="aside-section__item categories__item">Pet Owner Tips (24)</a>
                         <a href="#" class="aside-section__item categories__item">Veterinary Tips (12)</a>
+=======
+                        <?php $categories = get_categories();
+
+                        foreach ($categories as $category):?>
+                            <a href="#" class="aside-section__item categories__item is-active" data-id="<?= $category->term_id?>"><?= $category->name;?></a>
+                        <?php endforeach
+                        ?>
+>>>>>>> Stashed changes
                     </div>
 
                 </section>

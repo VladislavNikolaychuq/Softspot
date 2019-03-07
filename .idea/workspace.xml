@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="17bf7323-0aed-4bd6-bf6a-6d6a029b7921" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="17bf7323-0aed-4bd6-bf6a-6d6a029b7921" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/SoftSpot/assets/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/SoftSpot/assets/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/SoftSpot/assets/dist/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/SoftSpot/assets/dist/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/SoftSpot/assets/dist/css/preload-blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/SoftSpot/assets/dist/css/preload-blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/SoftSpot/assets/dist/css/preload.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/SoftSpot/assets/dist/css/preload.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/SoftSpot/assets/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/SoftSpot/assets/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/SoftSpot/assets/dist/php/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/SoftSpot/assets/dist/php/search.json" afterDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,6 +21,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< Updated upstream
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/functions.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -42,6 +54,71 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-430">
               <caret line="410" column="53" selection-start-line="410" selection-start-column="53" selection-end-line="410" selection-end-column="53" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/pages/page-blog.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+              <folding>
+                <element signature="n#style#0;n#svg#0;n#button#0;n#div#0;n#div#1;n#aside#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#1;n#aside#0;n#div#0;n#div#0;n#!!top" />
+                <element signature="n#section#0;n#aside#0;n#div#0;n#div#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/pages/page-home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7031">
+              <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/single.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="724">
+              <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
+              <folding>
+                <element signature="n#style#0;n#svg#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#1;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#iframe#0;n#span#0;n#div#0;n#div#1;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#iframe#0;n#span#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#svg#0;n#span#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#svg#0;n#span#0;n#a#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/inc/ajaxes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="34" />
+              <folding>
+                <element signature="n#get_search_result#0;n#!!top" />
+                <element signature="n#getAllEpisodes#0;n#!!top" />
+              </folding>
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -61,6 +138,36 @@
       <find>js</find>
       <find>vet</find>
       <find>diagnos</find>
+<<<<<<< Updated upstream
+=======
+      <find>loadi</find>
+      <find>js</find>
+      <find>img</find>
+      <find>blog.json</find>
+      <find>blog__item-</find>
+      <find>site_w</find>
+      <find>site__we</find>
+      <find>all</find>
+      <find>templet</find>
+      <find>preload__loading-line</find>
+      <find>living</find>
+      <find>blog</find>
+      <find>item</find>
+      <find>prici</find>
+      <find>post__head</find>
+      <find>prev</find>
+      <find>css</find>
+      <find>cat</find>
+      <find>asid</find>
+      <find>admin</find>
+      <find>wp-adnub</find>
+      <find>actiom</find>
+      <find>prelo</find>
+      <find>naviga</find>
+      <find>site</find>
+      <find>pre</find>
+      <find>preload</find>
+>>>>>>> Stashed changes
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -81,12 +188,34 @@
         <option value="$PROJECT_DIR$/wp-content/style.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/softspot/index.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/softspot/style.css" />
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/wp-content/themes/softspot/pages/page-blog.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/softspot/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/softspot/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/softspot/footer.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/softspot/inc/actions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/softspot/pages/page-home.php" />
+=======
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/footer.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/inc/menu.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/components/content-social-links.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/single-blog.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/assets/app/php/blog.json" />
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/pages/page-home.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/assets/dist/js/blog.min.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/assets/app/php/search.json" />
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/assets/dist/article.html" />
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/inc/actions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/inc/cpt.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/assets/package.json" />
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/assets/app/index.html" />
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/single.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/header.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/header-other.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/inc/ajaxes.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/softspot/pages/page-blog.php" />
+>>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -143,6 +272,36 @@
               <item name="softspot" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+<<<<<<< Updated upstream
+=======
+            </path>
+            <path>
+              <item name="softspot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="softspot" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="softspot" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="softspot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="softspot" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="softspot" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="softspot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="softspot" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="softspot" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+>>>>>>> Stashed changes
             </path>
             <path>
               <item name="softspot" type="b2602c69:ProjectViewProjectNode" />
@@ -217,6 +376,11 @@
       <workItem from="1551431697222" duration="1262000" />
       <workItem from="1551435959125" duration="1282000" />
       <workItem from="1551439425059" duration="9736000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1551775402685" duration="24428000" />
+      <workItem from="1551855469160" duration="28784000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Article">
       <created>1551432823160</created>
@@ -337,17 +501,71 @@
       <option name="project" value="LOCAL" />
       <updated>1551446232010</updated>
     </task>
+<<<<<<< Updated upstream
     <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="31019000" />
+=======
+    <task id="LOCAL-00018" summary="nice part">
+      <created>1551715397492</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1551715397492</updated>
+    </task>
+    <task id="LOCAL-00019" summary="nice part">
+      <created>1551715406534</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1551715406534</updated>
+    </task>
+    <task id="LOCAL-00020" summary="page blog">
+      <created>1551776143803</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1551776143803</updated>
+    </task>
+    <task id="LOCAL-00021" summary="page blog and ajaxes">
+      <created>1551789362023</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1551789362023</updated>
+    </task>
+    <task id="LOCAL-00022" summary="page blog and ajaxes">
+      <created>1551802524665</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1551802524665</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Maby full site">
+      <created>1551873151523</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1551873151523</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="92969000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-185" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< Updated upstream
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17252396" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19329074" />
+>>>>>>> Stashed changes
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -378,7 +596,15 @@
     <MESSAGE value="Start pack completed" />
     <MESSAGE value="WpGO" />
     <MESSAGE value="Wpn GO" />
+<<<<<<< Updated upstream
     <option name="LAST_COMMIT_MESSAGE" value="Wpn GO" />
+=======
+    <MESSAGE value="nice part" />
+    <MESSAGE value="page blog" />
+    <MESSAGE value="page blog and ajaxes" />
+    <MESSAGE value="Maby full site" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maby full site" />
+>>>>>>> Stashed changes
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/wp-admin/admin.php">
@@ -423,8 +649,47 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/single-pets.php">
       <provider selected="true" editor-type-id="text-editor" />
+=======
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/inc/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/components/content-social-links.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#svg#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#a#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#a#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#a#3;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/assets/app/js/jquery.blog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#svg#0;n#a#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/assets/app/php/blog.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+>>>>>>> Stashed changes
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/index.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -433,6 +698,190 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
+=======
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/assets/app/php/search.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/assets/dist/js/blog.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="601" column="21" lean-forward="true" selection-start-line="601" selection-start-column="21" selection-end-line="601" selection-end-column="21" />
+          <folding>
+            <element signature="e#50#85#0" />
+            <element signature="e#124#4364#0" />
+            <element signature="e#659#1044#0" />
+            <element signature="e#1077#2079#0" />
+            <element signature="e#1310#2065#0" />
+            <element signature="e#1351#1445#0" />
+            <element signature="e#1754#1890#0" />
+            <element signature="e#2111#2676#0" />
+            <element signature="e#2159#2305#0" />
+            <element signature="e#2237#2290#0" />
+            <element signature="e#2355#2537#0" />
+            <element signature="e#2587#2662#0" />
+            <element signature="e#2720#3426#0" />
+            <element signature="e#2811#2875#0" />
+            <element signature="e#2911#3011#0" />
+            <element signature="e#3089#3182#0" />
+            <element signature="e#3256#3372#0" />
+            <element signature="e#3284#3355#0" />
+            <element signature="e#3476#3787#0" />
+            <element signature="e#3827#4047#0" />
+            <element signature="e#3932#4027#0" />
+            <element signature="e#4080#4153#0" />
+            <element signature="e#4241#4275#0" />
+            <element signature="e#4312#4341#0" />
+            <element signature="e#4400#4452#0" />
+            <element signature="e#4484#7180#0" />
+            <element signature="e#4966#5813#0" />
+            <element signature="e#5019#5244#0" />
+            <element signature="e#5075#5225#0" />
+            <element signature="e#5299#5530#0" />
+            <element signature="e#5452#5512#0" />
+            <element signature="e#5587#5795#0" />
+            <element signature="e#5650#5710#0" />
+            <element signature="e#5716#5776#0" />
+            <element signature="e#5851#6352#0" />
+            <element signature="e#6107#6337#0" />
+            <element signature="e#6390#7014#0" />
+            <element signature="e#6657#6999#0" />
+            <element signature="e#6860#6977#0" />
+            <element signature="e#7052#7095#0" />
+            <element signature="e#7243#7788#0" />
+            <element signature="e#7276#7388#0" />
+            <element signature="e#7431#7478#0" />
+            <element signature="e#7526#7579#0" />
+            <element signature="e#7627#7675#0" />
+            <element signature="e#7722#7778#0" />
+            <element signature="e#7825#15930#0" />
+            <element signature="e#8673#9493#0" />
+            <element signature="e#8704#9168#0" />
+            <element signature="e#8748#9007#0" />
+            <element signature="e#8917#8985#0" />
+            <element signature="e#9051#9150#0" />
+            <element signature="e#9228#9329#0" />
+            <element signature="e#9389#9475#0" />
+            <element signature="e#9542#10198#0" />
+            <element signature="e#9988#10183#0" />
+            <element signature="e#10098#10158#0" />
+            <element signature="e#10245#12546#0" />
+            <element signature="e#10748#10924#0" />
+            <element signature="e#12584#12722#0" />
+            <element signature="e#12652#12707#0" />
+            <element signature="e#12762#13666#0" />
+            <element signature="e#12955#13648#0" />
+            <element signature="e#13014#13180#0" />
+            <element signature="e#13337#13402#0" />
+            <element signature="e#13459#13630#0" />
+            <element signature="e#13529#13608#0" />
+            <element signature="e#13708#15553#0" />
+            <element signature="e#13791#13962#0" />
+            <element signature="e#14102#14282#0" />
+            <element signature="e#14336#15227#0" />
+            <element signature="e#14504#15208#0" />
+            <element signature="e#14816#14956#0" />
+            <element signature="e#15075#15182#0" />
+            <element signature="e#15330#15407#0" />
+            <element signature="e#15413#15538#0" />
+            <element signature="e#15608#15790#0" />
+            <element signature="e#15687#15759#0" />
+            <element signature="e#15828#15901#0" />
+            <element signature="e#16678#18083#0" />
+            <element signature="e#16731#16920#0" />
+            <element signature="e#16840#16901#0" />
+            <element signature="e#16982#18065#0" />
+            <element signature="e#17072#18046#0" />
+            <element signature="e#17119#17204#0" />
+            <element signature="e#17229#17342#0" />
+            <element signature="e#17367#18024#0" />
+            <element signature="e#17441#17793#0" />
+            <element signature="e#17616#17754#0" />
+            <element signature="e#17839#18024#0" />
+            <element signature="e#18689#18860#0" />
+            <element signature="e#18759#18838#0" />
+            <element signature="e#19444#19939#0" />
+            <element signature="e#19560#19917#0" />
+            <element signature="e#19749#19894#0" />
+            <element signature="e#19945#20190#0" />
+            <element signature="e#20073#20171#0" />
+            <element signature="e#20256#20651#0" />
+            <element signature="e#20690#20791#0" />
+            <element signature="e#20834#21372#0" />
+            <element signature="e#21044#21354#0" />
+            <element signature="e#21084#21146#0" />
+            <element signature="e#21152#21213#0" />
+            <element signature="e#21411#22054#0" />
+            <element signature="e#21472#21525#0" />
+            <element signature="e#21710#22035#0" />
+            <element signature="e#21794#21892#0" />
+            <element signature="e#22094#22475#0" />
+            <element signature="e#22190#22460#0" />
+            <element signature="e#22369#22438#0" />
+            <element signature="e#22513#22556#0" />
+            <element signature="e#22684#23326#0" />
+            <element signature="e#22836#22958#0" />
+            <element signature="e#22889#22940#0" />
+            <element signature="e#22995#23131#0" />
+            <element signature="e#23169#23240#0" />
+            <element signature="e#23361#24418#0" />
+            <element signature="e#23595#24251#0" />
+            <element signature="e#23648#23918#0" />
+            <element signature="e#23743#23817#0" />
+            <element signature="e#23823#23900#0" />
+            <element signature="e#23948#24233#0" />
+            <element signature="e#23988#24215#0" />
+            <element signature="e#24079#24147#0" />
+            <element signature="e#24289#24332#0" />
+            <element signature="e#24450#25004#0" />
+            <element signature="e#24546#24836#0" />
+            <element signature="e#24749#24800#0" />
+            <element signature="e#24873#24918#0" />
+            <element signature="e#25033#25851#0" />
+            <element signature="e#25326#25413#0" />
+            <element signature="e#25443#25844#0" />
+            <element signature="e#25576#25830#0" />
+            <element signature="e#25728#25815#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/assets/app/blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="84" selection-end-column="30" />
+          <folding>
+            <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/assets/app/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="85" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="85" />
+          <folding>
+            <element signature="n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -440,6 +889,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/inc/actions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -465,11 +915,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+=======
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/inc/cpt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/assets/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/assets/dist/blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="341" column="16" lean-forward="true" selection-start-line="341" selection-start-column="16" selection-end-line="353" selection-end-column="41" />
+          <folding>
+            <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#main#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/assets/app/blog.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="-5367">
           <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
         </state>
@@ -479,11 +953,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="37" column="44" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="44" />
+=======
+        <state relative-caret-position="710">
+          <caret line="1089" column="25" selection-start-line="1089" selection-start-column="25" selection-end-line="1089" selection-end-column="25" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#article#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#article#0;n#div#1;n#div#1;n#div#1;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#1;n#div#1;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#1;n#div#1;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#div#1;n#div#1;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#5;n#div#1;n#div#1;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/assets/dist/php/blog.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/assets/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/assets/dist/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-195">
+          <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/pages/page-home.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="-430">
           <caret line="410" column="53" selection-start-line="410" selection-start-column="53" selection-end-line="410" selection-end-column="53" />
         </state>
@@ -493,6 +1005,84 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="676" column="36" selection-start-line="676" selection-start-column="36" selection-end-line="677" selection-end-column="158" />
+=======
+        <state relative-caret-position="724">
+          <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#svg#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#1;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#span#0;n#div#0;n#div#1;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#span#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#span#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#span#0;n#a#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/pages/page-home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7031">
+          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="831">
+          <caret line="92" column="7" selection-start-line="92" selection-start-column="7" selection-end-line="92" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/inc/actions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/header-other.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="55" column="47" lean-forward="true" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/assets/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/assets/dist/php/search.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/inc/ajaxes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="34" />
+          <folding>
+            <element signature="n#get_search_result#0;n#!!top" />
+            <element signature="n#getAllEpisodes#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/softspot/pages/page-blog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+          <folding>
+            <element signature="n#style#0;n#svg#0;n#button#0;n#div#0;n#div#1;n#aside#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#1;n#aside#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#section#0;n#aside#0;n#div#0;n#div#0;n#!!top" />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
