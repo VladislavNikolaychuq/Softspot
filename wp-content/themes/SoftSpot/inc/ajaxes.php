@@ -7,6 +7,7 @@ add_action('wp_ajax_get_search_result', 'get_search_result');
 
 add_action('wp_ajax_nopriv_get_search_result', 'get_search_result');
 
+<<<<<<< HEAD
 
 
 
@@ -16,6 +17,11 @@ function getBlogPosts($page,$taxId)
 {
 
     $parameters = array(
+=======
+function getBlogPosts($page)
+{
+    $pets = new WP_Query(array(
+>>>>>>> BlogPage
         'paged' =>$page,
         'posts_per_page' => 2,
         'orderby' => 'date',
@@ -24,6 +30,7 @@ function getBlogPosts($page,$taxId)
         'fields' => 'ids',
         'suppress_filters' => true,
         'post_status' => 'publish'
+<<<<<<< HEAD
     );
 
 
@@ -49,16 +56,27 @@ function getBlogPosts($page,$taxId)
 
     return $pets;
 
+=======
+    ));
+    return $pets;
+>>>>>>> BlogPage
 }
 
 
 function get_posts_by_category (){
 
     $page = $_POST["page"];
+<<<<<<< HEAD
     $taxId= $_POST['taxId'];
     $newpets = [];
 
     $pets = getBlogPosts($page,$taxId);
+=======
+
+    $newpets = [];
+
+    $pets = getBlogPosts($page);
+>>>>>>> BlogPage
 
 
         foreach ($pets->posts as $petID){

@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 get_header('other');
+=======
+get_header();
+>>>>>>> BlogPage
 
 
 $image_blog = get_field('image_blog');
@@ -12,6 +16,72 @@ $date = get_the_date('M d,Y');
 
 
 ?>
+<<<<<<< HEAD
+=======
+<header id="site-header">
+
+    <a href="https://softspotapp.com" id="logo">
+        <img src="https://softspotapp.com/wp-content/themes/soft-spot/assets/dist/img/logo-soft-spot.svg" alt="Soft-Spot">
+    </a>
+
+    <div id="site-header__mobile-wrap">
+
+        <div id="site-header__mobile-layout">
+
+            <div id="site-header__sign-up">
+                <p>sign up as</p>
+
+                <div>
+                    <a href="#" class="popup__open" data-popup="subscribe"><span>Pet Parent</span></a>
+                    <a href="#" class="popup__open" data-popup="subscribe"><span>Vet</span></a>
+                </div>
+
+            </div>
+
+            <div id="site-header__wrap">
+
+                <a href="tel:8665852579" id="site-header__phone">(866) 585-2579</a>
+
+                <nav id="menu">
+                    <ul>
+
+
+                        <li>
+
+                            <a href="<?= get_permalink(HOME)?>">Home</a>
+
+
+                        </li>
+
+
+                        <li class="is-active">
+
+                            <a href="<?= get_permalink(BLOG)?>">Blog</a>
+
+                            <div class="menu__cat"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.76 22.2">
+                                    <path d="M3.09,15.5a11.72,11.72,0,0,0,1.6,6.4.86.86,0,0,0,.6.3h0c.1,0,.2-.1.3-.1a21.65,21.65,0,0,0,3.8-4c.4.1.9.1,1.6.2h2.7a20.9,20.9,0,0,0,2.5-.1,5.21,5.21,0,0,0,1.4-.2,21.33,21.33,0,0,0,3.8,4,.52.52,0,0,0,.4.2c.2,0,.3-.1.4-.3a11.94,11.94,0,0,0,1.6-6.4c3.4-5.9,3.1-10.1,2.8-14.5V.5A.56.56,0,0,0,26,0h0a.56.56,0,0,0-.5.6v.6c.3,4.4.6,8.2-2.7,13.9a.37.37,0,0,0-.1.3,12.57,12.57,0,0,1-1.1,5.3,18.48,18.48,0,0,1-3.3-3.5.78.78,0,0,0-.7-.3,4.23,4.23,0,0,1-1.6.2,19.27,19.27,0,0,1-2.4.1H11a5.42,5.42,0,0,1-1.7-.2.52.52,0,0,0-.7.3,17,17,0,0,1-3.2,3.5,12.78,12.78,0,0,1-1.2-5.2.76.76,0,0,0-.1-.4C.39,8.6.89,5,1.49.8a.6.6,0,0,0-.1-.4A.52.52,0,0,0,1,.2a.6.6,0,0,0-.4.1.52.52,0,0,0-.2.4C-.31,5.4-.41,9.1,3.09,15.5Z"></path>
+                                    <path d="M12.39,12.1a.76.76,0,0,0,.4-.2,4.35,4.35,0,0,1,.6-.7l.7.7a.52.52,0,0,0,.4.2c.2,0,.3,0,.4-.1a.52.52,0,0,0,.2-.4c0-.2,0-.3-.1-.4a3.18,3.18,0,0,0-1-1V9.3c.1-.2.1-.3.2-.5a3,3,0,0,1,.4-.8.6.6,0,0,0,.1-.4.76.76,0,0,0-.2-.4.37.37,0,0,0-.3-.1c-.2,0-.3.1-.5.2a2.19,2.19,0,0,1-.3.5c-.1-.2-.2-.3-.3-.5a.66.66,0,0,0-.7-.2.72.72,0,0,0-.2.8.76.76,0,0,1,.2.4,3.51,3.51,0,0,0,.5.8V10a6.47,6.47,0,0,0-.8.9l-.1.2a.64.64,0,0,0,0,.6C12,12.1,12.19,12.2,12.39,12.1Z"></path>
+                                </svg>
+                                <span class="menu__cat-eye-left"></span>
+                                <span class="menu__cat-eye-right"></span>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+    </div>
+
+    <span id="hamburger">
+                <span></span>
+            </span>
+
+</header>
+>>>>>>> BlogPage
 
 <div id="site__wrap" data-action="<?php echo admin_url( 'admin-ajax.php' ); ?>">
 
@@ -64,7 +134,11 @@ $date = get_the_date('M d,Y');
 
                     <div style="" class="heateor_ffc_facebook_comments"><style type="text/css">.fb-comments,.fb-comments span,.fb-comments span iframe[style]{min-width:100%!important;width:100%!important}</style><script type="text/javascript">!function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||(o=e.createElement(n),o.id=t,o.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script><div class="fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop" data-href="https://softspotapp.com/keeping-your-pet-safe-from-rattlesnake-bites/" data-numposts="" data-colorscheme="light" data-order-by="social" data-width="100%" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;color_scheme=light&amp;container_width=654&amp;height=100&amp;href=https%3A%2F%2Fsoftspotapp.com%2Fkeeping-your-pet-safe-from-rattlesnake-bites%2F&amp;locale=en_US&amp;order_by=social&amp;sdk=joey&amp;version=v3.2" style="width: 100%;"><span style="vertical-align: bottom; width: 100%; height: 179px;"><iframe name="f3e31408a585f58" width="1000px" height="100px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:comments Facebook Social Plugin" src="https://www.facebook.com/v3.2/plugins/comments.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2Fvy-MhgbfL4v.js%3Fversion%3D44%23cb%3Dfef749d4d3fedc%26domain%3Dsoftspotapp.com%26origin%3Dhttps%253A%252F%252Fsoftspotapp.com%252Ff29e82adee62e98%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=654&amp;height=100&amp;href=https%3A%2F%2Fsoftspotapp.com%2Fkeeping-your-pet-safe-from-rattlesnake-bites%2F&amp;locale=en_US&amp;order_by=social&amp;sdk=joey&amp;version=v3.2" style="border: none; visibility: visible; width: 100%; height: 179px;" class=""></iframe></span></div></div>
                 </div>
+<<<<<<< HEAD
             </div>
+=======
+
+>>>>>>> BlogPage
 
 
 
@@ -118,7 +192,11 @@ $date = get_the_date('M d,Y');
             <?php endif; ?>
         </div>
 
+<<<<<<< HEAD
 
+=======
+</div>
+>>>>>>> BlogPage
 
         <!-- site__aside -->
         <aside id="site__aside">
